@@ -4,112 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>しーたけ | Portfolio</title>
+    <meta name="description" content="しーたけのポートフォリオ。情報工学、競技プログラミング、Web開発、セキュリティへの取り組みを紹介します。">
+    <title>Siitake | Portfolio</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>こんにちは！</h1>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="トップへ戻る">
+            <span class="brand-mark">YATTA!</span>
+            <span class="brand-text">Siitake's Portfolio</span>
+        </a>
 
-        <nav aria-label="メインナビゲーション">
+        <button class="menu-button" type="button" aria-label="メニューを開く" aria-controls="site-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
             <ul>
-                <li>
-                    <a href="#profile">プロフィール</a>
-                </li>
-                <li>
-                    <a href="#skills">技術スタック</a>
-                </li>
-                <li>
-                    <a href="#interest">興味のある分野・技術</a>
-                </li>
-                <li>
-                    <a href="#achievement">実績</a>
-                </li>
-                <li>
-                    <a href="#history">経歴</a>
-                </li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#interest">Interest</a></li>
+                <li><a href="#achievement">Achievement</a></li>
+                <li><a href="#history">History</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="profile">
-            <h2>プロフィール</h2>
-            <img src="images/YATTA.png" alt="やったね識ちゃん">
-            <ul>
-                <li>名前: しーたけ</li>
-                <li>所属: 岡山大学 工学部工学科情報電気数理データサイエンスコース 情報工学コース</li>
-            </ul>
-        </section>
-        <section id="about">
-            <h2>
-                自己紹介
-            </h2>
-            <p>
-                岡山大学工学部の2年生です。大学では情報工学を学んでいます。
-                DS部というサークルで技術部長をしており、さまざまなプロジェクトや共同研究に参加しています。
-                また、趣味で競技プログラミングをやっておりAtcoder社が主催するコンテストにほぼ毎週参加しています。
-            </p>
-        </section>
-        <section id="skills">
-            <h2>
-                技術スタック
-            </h2>
-            <ul>
-                <li>
-                    C++
-                </li>
-                <li>
-                    HTML
-                </li>
-            </ul>
-        </section>
-        <section id="interest">
-            <h2>
-                興味のある分野・技術
-            </h2>
-            <ul>
-                <li>
-                    Python
-                </li>
-                <li>
-                    Javascript
-                </li>
-                <li>
-                    Web開発
-                </li>
-                <li>
-                    セキュリティ
-                </li>
-            </ul>
-        </section>
-        <section id="achievement">
-            <h2>
-                実績
-            </h2>
-            <ul>
-                <li>
-                    Atcoder Algorithm: 緑, Heuristic: 緑
-                </li>
-                <li>
-                    JOL2024選抜枠: 銀賞
-                </li>
 
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content reveal">
+                <p class="eyebrow">Information Engineering Student</p>
+                <h1 id="hero-title"><span id="time-greeting">こんにちは！</span><br>しーたけです</h1>
+                <p class="hero-lead">
+                    岡山大学で情報工学を学びながら、さまざまなプロジェクトや共同研究に参加しています。
+                    競技プログラミングで鍛えた実装力を、Web開発やセキュリティの学習へ広げています。
+                </p>
+                <div class="hero-actions">
+                    <a class="primary-link" href="#achievement">実績を見る</a>
+                    <a class="secondary-link" href="#skills">できること</a>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <img src="images/YATTA.png" alt="YATTAと書かれたビジュアル">
+                <div class="hero-note">
+                    <span>Latest Blog</span>
+                    <strong>記事は準備中です</strong>
+                    <p>学習記録や制作メモを、あとからここに表示します。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile" class="section-block reveal" aria-labelledby="profile-title">
+            <div class="section-heading">
+                <p class="section-label">Profile</p>
+                <h2 id="profile-title">プロフィール</h2>
+            </div>
+            <div class="profile-grid">
+                <p>
+                    岡山大学工学部の2年生です。大学では情報工学を学んでいます。
+                    DS部というサークルで技術部長をしており、さまざまなプロジェクトや共同研究に参加しています。
+                </p>
+                <dl class="profile-list">
+                    <div>
+                        <dt>名前</dt>
+                        <dd>しーたけ</dd>
+                    </div>
+                    <div>
+                        <dt>所属</dt>
+                        <dd>岡山大学 工学部工学科 情報電気数理データサイエンスコース 情報工学コース</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section id="skills" class="section-block reveal" aria-labelledby="skills-title">
+            <div class="section-heading">
+                <p class="section-label">Skills</p>
+                <h2 id="skills-title">技術スタック</h2>
+            </div>
+            <ul class="skill-list">
+                <li>C++</li>
+                <li>HTML</li>
             </ul>
         </section>
-        <section id="history">
-            <h2>
-                経歴
-            </h2>
-            <ul>
-                <li>2025/4 岡山大学工学部工学科情報電気数理データサイエンスコース</li>
-                <li>2026/4 岡山大学工学部工学科情報電気数理データサイエンスコース情報工学コース</li>
-                <li>2026/4 岡山大学DS部技術部長</li>
-            </ul>
+
+        <section id="interest" class="section-block reveal" aria-labelledby="interest-title">
+            <div class="section-heading">
+                <p class="section-label">Interest</p>
+                <h2 id="interest-title">興味のある分野・技術</h2>
+            </div>
+            <div class="interest-grid">
+                <article>
+                    <h3>Web開発</h3>
+                    <p>HTML/CSS/JavaScriptを中心に、使いやすく見やすいUIを作る力を伸ばしています。</p>
+                </article>
+                <article>
+                    <h3>セキュリティ</h3>
+                    <p>安全なシステム設計や脆弱性への理解を深め、実践的な知識として身につけています。</p>
+                </article>
+                <article>
+                    <h3>競技プログラミング</h3>
+                    <p>AtCoderなどを通して、アルゴリズムと実装速度を継続的に鍛えています。</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="achievement" class="section-block reveal" aria-labelledby="achievement-title">
+            <div class="section-heading">
+                <p class="section-label">Achievement</p>
+                <h2 id="achievement-title">実績</h2>
+            </div>
+            <div class="achievement-grid">
+                <article>
+                    <span class="achievement-kicker">AtCoder</span>
+                    <h3>Algorithm / Heuristic 緑</h3>
+                    <p>継続的なコンテスト参加を通じて、問題解決力と実装力を磨いています。</p>
+                </article>
+                <article>
+                    <span class="achievement-kicker">JOL 2024</span>
+                    <h3>選抜枠 銀賞</h3>
+                    <p>学習と挑戦の積み重ねを、成果として形にしています。</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="history" class="section-block reveal" aria-labelledby="history-title">
+            <div class="section-heading">
+                <p class="section-label">History</p>
+                <h2 id="history-title">経歴</h2>
+            </div>
+            <ol class="timeline">
+                <li>
+                    <time datetime="2025-04">2025/4</time>
+                    <span>岡山大学工学部工学科 情報電気数理データサイエンスコース</span>
+                </li>
+                <li>
+                    <time datetime="2026-04">2026/4</time>
+                    <span>岡山大学工学部工学科 情報電気数理データサイエンスコース 情報工学コース</span>
+                </li>
+                <li>
+                    <time datetime="2026-04">2026/4</time>
+                    <span>岡山大学DS部 技術部長</span>
+                </li>
+            </ol>
         </section>
     </main>
-    <footer>
-        <p>&copy; しーたけ</p>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year">2026</span> しーたけ</p>
+        <a href="#top">Back to top</a>
     </footer>
 </body>
 
