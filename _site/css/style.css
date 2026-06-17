@@ -112,7 +112,7 @@ a {
 }
 
 .site-nav a:hover,
-.site-nav a.is-active {
+.site-nav a.is-current {
     color: var(--accent-dark);
     background-color: rgba(15, 118, 110, 0.1);
 }
@@ -159,10 +159,9 @@ main {
 .hero {
     display: grid;
     grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
-    gap: 48px;
     align-items: center;
-    min-height: calc(100vh - 88px);
-    padding: 72px 0 56px;
+    min-height: auto;
+    padding: 40px 0 40px;
 }
 
 .eyebrow,
@@ -281,9 +280,54 @@ main {
     line-height: 1.6;
 }
 
+.section-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.section-nav>span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.section-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section-nav a {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 8px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    transition: color 180ms ease, background-color 180ms ease;
+}
+
+.section-nav a:hover,
+.section-nav a.is-active {
+    color: var(--accent-dark);
+    background: rgba(15, 118, 110, 0.1);
+}
+
 .section-block {
     margin: 0 0 28px;
-    padding: 72px 0;
+    padding: 48px 0;
     border-top: 1px solid rgba(217, 222, 231, 0.9);
     scroll-margin-top: 112px;
 }
@@ -353,6 +397,31 @@ main {
     color: var(--accent-dark);
     background: rgba(15, 118, 110, 0.08);
     font-weight: 800;
+}
+
+.SNS-list {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.SNS-list li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 14px;
+    border: 1px solid rgba(15, 118, 110, 0.22);
+    border-radius: 8px;
+    color: var(--accent-dark);
+    background: rgba(15, 118, 110, 0.08);
+    font-weight: 800;
+}
+
+.SNS-list a {
+    display: block;
+    text-align: center;
 }
 
 .interest-grid,
@@ -457,6 +526,201 @@ main {
     text-decoration: none;
 }
 
+.placeholder-page {
+    display: grid;
+    place-items: center;
+    min-height: calc(100vh - 88px);
+    padding: 64px 0;
+}
+
+.placeholder-page section {
+    width: min(720px, 100%);
+    padding: 48px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.placeholder-page h1 {
+    margin: 0 0 16px;
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.placeholder-page p:not(.eyebrow) {
+    margin: 0 0 28px;
+    color: var(--muted);
+}
+
+.blog-index {
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 88px 0 40px;
+}
+
+.blog-index-heading {
+    padding-bottom: 56px;
+}
+
+.blog-index-heading h1 {
+    margin: 0;
+    font-size: 56px;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+}
+
+.blog-index-heading>p:last-child {
+    max-width: 640px;
+    margin: 20px 0 0;
+    color: var(--muted);
+}
+
+
+.post-list>h2 {
+    margin: 0 0 24px;
+    font-size: 30px;
+}
+
+.post-list-items {
+    display: grid;
+    gap: 16px;
+}
+
+.post-list-item {
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+}
+
+.post-list-item h3 {
+    margin: 6px 0 8px;
+    font-size: 23px;
+}
+
+.post-list-item h3 a,
+.post-read-link {
+    color: var(--ink);
+    font-size: 19px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.post-list-item h3 a:hover,
+.post-read-link:hover {
+    color: var(--accent-dark);
+}
+
+.post-list-item p {
+    margin: 0 0 14px;
+    color: var(--muted);
+}
+
+.blog-main {
+    min-height: calc(100vh - 220px);
+    padding: 72px 0;
+}
+
+.blog-header {
+    margin-bottom: 36px;
+}
+
+.blog-header h1,
+.post-content h1 {
+    margin: 0;
+    font-size: 52px;
+    line-height: 1.18;
+    overflow-wrap: anywhere;
+}
+
+.blog-header>p:last-child {
+    margin: 16px 0 0;
+    color: var(--muted);
+}
+
+.post-list {
+    display: grid;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.post-list-item time {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface-strong);
+    box-shadow: var(--shadow);
+}
+
+.post-date {
+    display: block;
+    margin: 14px 0 36px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.post-content h2 {
+    margin: 40px 0 12px;
+    font-size: 28px;
+    line-height: 1.35;
+}
+
+.post-content p {
+    margin: 0 0 20px;
+}
+
+.post-content a {
+    color: var(--accent-dark);
+}
+
+.post-content img {
+    display: block;
+  max-width: min(100%, 720px);
+  height: auto;
+}
+.post-content pre {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.games-list {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.game-item {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: white;
+}
+
+.game-image {
+    aspect-ratio: 1 / 1;
+    background: url("../images/YATTA.png") center / cover no-repeat;
+}
+
+.game-title {
+    margin: 0;
+    padding: 12px;
+    font-size: 18px;
+}
 .reveal {
     opacity: 0;
     transform: translateY(18px);
@@ -493,7 +757,7 @@ main {
     }
 
     .site-nav.is-open {
-       display: block;
+        display: block;
     }
 
     .site-nav ul {
@@ -523,6 +787,7 @@ main {
 }
 
 @media (max-width: 560px) {
+
     main,
     .site-footer {
         width: calc(100% - 24px);
@@ -540,12 +805,45 @@ main {
         padding: 24px;
     }
 
+    .section-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section-nav ul {
+        justify-content: flex-start;
+    }
+
     .hero h1 {
         font-size: 42px;
     }
 
     .section-heading h2 {
         font-size: 32px;
+    }
+
+    .blog-index,
+    .blog-main {
+        width: calc(100% - 24px);
+    }
+
+    .blog-index {
+        padding-top: 56px;
+    }
+
+    .blog-main {
+        padding: 48px 0 24px;
+    }
+
+    .blog-index-heading h1,
+    .blog-header h1,
+    .post-content h1 {
+        font-size: 36px;
+    }
+
+    .post-content {
+        padding: 24px;
     }
 
     .profile-list div,

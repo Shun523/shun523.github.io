@@ -13,7 +13,7 @@
 
 <body>
     <header class="site-header">
-        <a class="brand" href="#top" aria-label="トップへ戻る">
+        <a class="brand" href="./" aria-label="ホームへ戻る">
             <span class="brand-mark">YATTA!</span>
             <span class="brand-text">Siitake's Portfolio</span>
         </a>
@@ -26,28 +26,33 @@
 
         <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
             <ul>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#interest">Interest</a></li>
-                <li><a href="#achievement">Achievement</a></li>
-                <li><a href="#history">History</a></li>
+                <li><a class="is-current" href="./">Home</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="games/">Games</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="top">
+        <nav class="section-nav reveal" aria-label="このページの目次">
+            <span>On this page</span>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#interest">Interest</a></li>
+                <li><a href="#achievement">Achievement</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#SNS">SNS</a></li>
+            </ul>
+        </nav>
+
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-content reveal">
-                <p class="eyebrow">Information Engineering Student</p>
-                <h1 id="hero-title"><span id="time-greeting">こんにちは！</span><br>しーたけです</h1>
+                <h1 id="hero-title"><span>Hello World!</span></h1>
                 <p class="hero-lead">
-                    岡山大学で情報工学を学びながら、さまざまなプロジェクトや共同研究に参加しています。
-                    競技プログラミングで鍛えた実装力を、Web開発やセキュリティの学習へ広げています。
+                    <span id="timeGreeting">こんにちは！</span>しーたけのポートフォリオへようこそ。
+
                 </p>
-                <div class="hero-actions">
-                    <a class="primary-link" href="#achievement">実績を見る</a>
-                    <a class="secondary-link" href="#skills">できること</a>
-                </div>
             </div>
 
             <div class="hero-visual reveal">
@@ -59,6 +64,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <section id="profile" class="section-block reveal" aria-labelledby="profile-title">
             <div class="section-heading">
@@ -90,7 +97,7 @@
             </div>
             <ul class="skill-list">
                 <li>C++</li>
-                <li>HTML</li>
+                <li>HTML/CSS</li>
             </ul>
         </section>
 
@@ -153,6 +160,19 @@
                     <span>岡山大学DS部 技術部長</span>
                 </li>
             </ol>
+        </section>
+
+        <section id="SNS" class="section-block reveal" aria-labelledby="SNS-title">
+            <div class="section-heading">
+                <h2 id="SNS-title">SNS</h2>
+            </div>
+
+            <ul class="SNS-list">
+                <li>Github:<a href="https://github.com/Shun523">Shun523</a></li>
+                <li>X:<a href="https://x.com/Siitake_7">@Siitake_7</a></li>
+                <li>Atcoder:<a href="https://atcoder.jp/users/Siitake7">Siitake7</a></li>
+                <li>DS部:<a href="https://okadai-dsc.studio.site/">DS部HP</a></li>
+            </ul>
         </section>
     </main>
 

@@ -1,0 +1,4 @@
+encoding: utf-8
+url: "https://shun523.github.io"
+baseurl: ""
+permalink: /blog/:year/:month/:day/:title/

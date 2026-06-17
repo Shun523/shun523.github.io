@@ -1,6 +1,7 @@
 const menuButton = document.querySelector(".menu-button");
 const siteNav = document.querySelector(".site-nav");
-const navLinks = document.querySelectorAll(".site-nav a");
+const menuLinks = document.querySelectorAll(".site-nav a");
+const sectionLinks = document.querySelectorAll(".section-nav a");
 const currentYear = document.querySelector("#current-year");
 const timeGreeting = document.querySelector("#time-greeting");
 
@@ -29,7 +30,7 @@ if (menuButton && siteNav) {
         document.body.classList.toggle("menu-open", !isOpen);
     });
 
-    navLinks.forEach((link) => {
+    menuLinks.forEach((link) => {
         link.addEventListener("click", () => {
             menuButton.setAttribute("aria-expanded", "false");
             menuButton.setAttribute("aria-label", "メニューを開く");
@@ -67,7 +68,7 @@ if ("IntersectionObserver" in window) {
                 return;
             }
 
-            navLinks.forEach((link) => {
+            sectionLinks.forEach((link) => {
                 link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
             });
         });
