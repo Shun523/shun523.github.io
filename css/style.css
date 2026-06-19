@@ -738,7 +738,7 @@ main {
 
 .game-image {
     aspect-ratio: 1 / 1;
-    background: url("../images/YATTA.png") center / cover no-repeat;
+    background: url("../images/udon.png") center / cover no-repeat;
 }
 
 .game-title {
