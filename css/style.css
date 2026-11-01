@@ -723,6 +723,38 @@ main {
     border-radius: 0;
 }
 
+.post-content table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    margin: 24px 0;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.post-content th,
+.post-content td {
+    padding: 8px 14px;
+    border: 1px solid var(--line);
+}
+
+.post-content th,
+.post-content td:first-child {
+    white-space: nowrap;
+}
+
+.post-content th {
+    background: rgba(15, 118, 110, 0.08);
+    font-weight: 800;
+    text-align: left;
+}
+
+.post-content tbody tr:nth-child(even) {
+    background: var(--bg);
+}
+
 .games-list {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -869,6 +901,15 @@ main {
 
     .post-content {
         padding: 24px;
+    }
+
+    .post-content table {
+        font-size: 14px;
+    }
+
+    .post-content th,
+    .post-content td {
+        padding: 6px 10px;
     }
 
     .profile-list div,
