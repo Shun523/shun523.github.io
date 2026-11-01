@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',sans-serif" role="img" aria-label="システム構成図">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="720" height="420" fill="#fffdf6"/>
+
+  <!-- スマホ -->
+  <rect x="30" y="40" width="190" height="120" rx="14" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="125" y="78" text-anchor="middle" font-size="18" font-weight="700" fill="#222">参加者のスマホ</text>
+  <text x="125" y="104" text-anchor="middle" font-size="14" fill="#555">ブラウザ（React）</text>
+  <text x="125" y="128" text-anchor="middle" font-size="14" fill="#555">スタンプ帳・QR表示</text>
+
+  <!-- スタンプ機 -->
+  <rect x="30" y="260" width="190" height="130" rx="14" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="125" y="296" text-anchor="middle" font-size="18" font-weight="700" fill="#222">スタンプ機 ×5台</text>
+  <text x="125" y="322" text-anchor="middle" font-size="14" fill="#555">Raspberry Pi Zero 2 W</text>
+  <text x="125" y="344" text-anchor="middle" font-size="14" fill="#555">カメラ＋円形液晶</text>
+  <text x="125" y="366" text-anchor="middle" font-size="14" fill="#555">Python＋OpenCV</text>
+
+  <!-- サーバー -->
+  <rect x="400" y="150" width="200" height="120" rx="14" fill="#fff4d6" stroke="#333" stroke-width="2"/>
+  <text x="500" y="188" text-anchor="middle" font-size="18" font-weight="700" fill="#222">サーバー</text>
+  <text x="500" y="214" text-anchor="middle" font-size="14" fill="#555">Cloud Run（Hono）</text>
+  <text x="500" y="238" text-anchor="middle" font-size="14" fill="#555">押印の記録・通知</text>
+
+  <!-- DB -->
+  <rect x="430" y="330" width="140" height="64" rx="14" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="500" y="358" text-anchor="middle" font-size="16" font-weight="700" fill="#222">Supabase</text>
+  <text x="500" y="380" text-anchor="middle" font-size="13" fill="#555">PostgreSQL</text>
+
+  <!-- ダッシュボード -->
+  <rect x="420" y="30" width="160" height="64" rx="14" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="500" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#222">スタッフ画面</text>
+  <text x="500" y="80" text-anchor="middle" font-size="13" fill="#555">機体の死活監視</text>
+
+  <!-- QRを読む（光学） -->
+  <line x1="125" y1="252" x2="125" y2="168" stroke="#d63b3b" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#a)"/>
+  <text x="137" y="215" font-size="14" font-weight="700" fill="#d63b3b">画面のQRをカメラで読む</text>
+
+  <!-- 押印POST -->
+  <line x1="222" y1="318" x2="394" y2="236" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+  <text x="250" y="300" font-size="14" fill="#222">① 押印（HTTPS）</text>
+
+  <!-- SSE -->
+  <line x1="394" y1="178" x2="226" y2="120" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+  <text x="262" y="128" font-size="14" fill="#222">② 通知（SSE）</text>
+  <line x1="226" y1="146" x2="394" y2="204" stroke="#333" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#a)"/>
+  <text x="270" y="196" font-size="14" fill="#222">③ 受け取った（ACK）</text>
+
+  <!-- DB -->
+  <line x1="500" y1="272" x2="500" y2="326" stroke="#333" stroke-width="2" marker-start="url(#a)" marker-end="url(#a)"/>
+  <!-- ダッシュボード -->
+  <line x1="500" y1="98" x2="500" y2="146" stroke="#333" stroke-width="2" marker-start="url(#a)" marker-end="url(#a)"/>
+</svg>
